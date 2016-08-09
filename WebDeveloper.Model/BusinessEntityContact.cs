@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -33,6 +34,7 @@ namespace WebDeveloper.Model
 
         public virtual ContactType ContactType { get; set; }
 
+        [JsonIgnore]
         public virtual Person Person { get; set; }
     }
 }

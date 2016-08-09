@@ -12,10 +12,13 @@ namespace WebDeveloper.DataAccess
     {
         public List<AddressModelView> GetListDto()
         {
-            using (var db = new WebContextDb())
+            using (var db =new WebContextDb())
             {
-                return Automapper.GetGeneric<List<Address>, List<AddressModelView>>(db.Address.Take(10).ToList());
+                return Automapper.GetGeneric<List<Address>,
+                                             List<AddressModelView>>(
+                                            db.Address.Take(10).ToList()
+                                            );
             }
-        } 
+        }
     }
 }

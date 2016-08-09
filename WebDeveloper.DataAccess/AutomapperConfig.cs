@@ -32,10 +32,10 @@ namespace WebDeveloper.DataAccess
         }
 
 
-        public static IEnumerable<R> GetGeneric<T, R>(IEnumerable<T> claimList)
+        public static IEnumerable<R> GetGeneric<T, R>(IEnumerable<T> objectList)
         {
             var mapper = _config.CreateMapper();
-            return mapper.Map<IEnumerable<T>, List<R>>(claimList);
+            return mapper.Map<IEnumerable<T>, List<R>>(objectList);
         }
 
         public static R GetGeneric<T, R>(T keyDocumentParent)

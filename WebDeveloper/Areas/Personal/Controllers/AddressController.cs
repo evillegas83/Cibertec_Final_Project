@@ -10,8 +10,7 @@ namespace WebDeveloper.Areas.Personal.Controllers
     public class AddressController : Controller
     {
         // GET: Personal/Address
-        private readonly AddressRepository _address;
-
+        private AddressRepository _address;
         public AddressController(AddressRepository address)
         {
             _address = address;
